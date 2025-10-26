@@ -1,0 +1,103 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0px;
+  transition: background-color 0.3s ease;
+}
+
+.radio-canada {
+  font-family: "Radio Canada", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "";
+}
+
+.heading {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+}
+.heading-2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.hint {
+  font-family: "Roboto Condensed";
+  height: 32px;
+  min-width: 44px;
+  max-width: 103px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  margin-left: 12px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+
+p {
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+ul {
+  background: transparent;
+  li {
+    background: transparent;
+  }
+}
+.dark-mode {
+  background: #030712;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode p {
+  color: #d1d5db;
+}
+
+.light-mode p {
+  color: rgb(75 85 99);
+}
+
+.dark-mode ul {
+  color: #d1d5db;
+}
+
+.light-mode ul {
+  color: rgb(75 85 99);
+}
+
+.dark-mode-2 {
+  background: white;
+  color: black;
+}
+
+.dark-text {
+  color: #d1d5db;
+}
+
+.light-text {
+  color: rgb(75 85 99);
+}
+
+.global-padding {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.sub-heading {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
