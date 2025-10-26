@@ -75,8 +75,7 @@ Feel free to fork this project and customize it for your own portfolio. Update t
 ## 📧 Contact
 
 - **GitHub:** [@jaya-prakash11](https://github.com/jaya-prakash11)
-- **Email:** your.email@example.com <!-- Add your email -->
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourprofile) <!-- Add your LinkedIn -->
+- **Email:** jayaprakash11@gmail.com <!-- Add your email -->
 
 ## 📄 License
 
