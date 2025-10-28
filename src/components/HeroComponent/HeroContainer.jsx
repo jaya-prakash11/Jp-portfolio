@@ -1,5 +1,5 @@
 import "../HeroComponent/herocomponent.scss";
-import Profile from "../../assets/Profile.jpg";
+import Profile from "../../assets/profile.jpg";
 export default function HeroContainer() {
   return (
     <div className=" global-padding hero-container ">
