@@ -39,7 +39,7 @@ function WorkContainer() {
   return (
     <div className="work-container global-padding ">
       <HintComponent title={"Projects"} />
-      <p className="sub-heading">
+      <p className="sub-heading" style={{ textAlign: "center" }}>
         Here is a quick summary of my most recent experiences:
       </p>
       <div className="work-holder">

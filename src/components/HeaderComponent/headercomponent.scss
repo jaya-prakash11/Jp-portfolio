@@ -1,13 +1,4 @@
 .header-bar {
-  // display: flex;
-  // position: sticky;
-  // flex-direction: row;
-  // width: 100%;
-  // height: 55px;
-  // background: rgba(255, 255, 255, 0.1);
-  // backdrop-filter: blur(10px);
-  // -webkit-backdrop-filter: blur(10px);
-
   position: fixed;
   top: 0;
   left: 0;
@@ -178,6 +169,155 @@
   }
 }
 
+///switch ends here
+// * Menu code starts here */
+
+#menuToggle {
+  display: none;
+  /* You can also use relative/absolute here if you want to stay on the top */
+  position: fixed;
+  top: 20px;
+  right: 45px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  // color: white;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  // transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(-2px, 1px);
+  // background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  // transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-47deg) translate(0, -2px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  max-width: 400px;
+  width: 100vw;
+  height: 1000vh;
+  max-height: 1000vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  // background: #ededed;
+
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(35%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li label {
+  cursor: pointer;
+  // color: white !important;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: translate(-45%, 0);
+}
+
+/// menu toogle ends here
+.menu-other-holder {
+  display: flex;
+  width: 80%;
+  min-width: 200px;
+}
 .name-holder {
   font-family: "Radio Canada";
   font-size: 2.1rem; // Responsive font
@@ -232,48 +372,60 @@
   color: white;
 }
 
-// Media queries for small screens
-@media (max-width: 900px) {
+.dark-mode-header {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .menu-other-holder {
+    display: flex;
+  }
   .header-bar {
-    flex-direction: column;
-    height: auto;
-    padding: 3px 4% 0 4%;
-  }
-  .name-holder {
-    margin-bottom: 8px;
-    font-size: 1.4rem;
-  }
-  .menu-container {
-    width: 100%;
-    justify-content: space-around;
-    padding-top: 5px;
-  }
-  .menu-container a,
-  .download-button {
-    font-size: 1rem;
-    margin-right: 8px;
-    margin-bottom: 5px;
+    padding: 3px 12% 0 12%;
   }
 }
 
-@media (max-width: 500px) {
+/* Tablets Landscape */
+@media (max-width: 992px) {
+  .menu-other-holder {
+    display: flex;
+  }
   .header-bar {
-    padding: 5px 2% 0 2%;
+    padding: 3px 2% 0 2%;
   }
-  .menu-container {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 6px;
-    padding-top: 3px;
-  }
-  .name-holder {
-    font-size: 1.1rem;
-  }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
   .download-button {
-    width: 100%;
-    margin: 6px 0;
-    padding: 8px;
-    text-align: center;
+    width: 70%;
+    margin-left: -9px;
+    margin-top: 11px;
+  }
+  .menu-other-holder {
+    display: none;
+  }
+  .header-bar {
+    padding: 3px 1% 0 1%;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  /* ... */
+  .name-holder {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 320px) {
+  .name-holder {
+    font-size: 1.5rem !important;
   }
 }

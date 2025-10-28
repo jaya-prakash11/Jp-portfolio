@@ -26,6 +26,7 @@
   display: flex;
   width: 80%;
   height: 71%;
+  transition: 0.3s ease;
 }
 
 .profile-img-style {
@@ -44,18 +45,6 @@
   gap: 5%;
 }
 
-.about-pic-conatiner {
-  display: flex;
-  width: 80%;
-  height: 70%;
-  border: 2px solid white;
-}
-
-.aboutmepic-style {
-  width: 100%;
-  height: 100%;
-}
-
 .about-me-holder {
   display: flex;
 }
@@ -63,6 +52,17 @@
   display: flex;
   width: 50%;
   height: 800px;
+}
+
+.about-pic-conatiner {
+  display: flex;
+  width: 80%;
+  height: 70%;
+  border: 2px solid white;
+}
+.aboutmepic-style {
+  width: 100%;
+  height: 100%;
 }
 .aboutmetext-holder {
   display: flex;
@@ -238,5 +238,217 @@
     justify-content: center;
     align-items: center;
     margin-top: 67px;
+  }
+}
+
+/* Large Desktops */
+@media (max-width: 1400px) {
+  .photo-holder {
+    display: flex;
+    width: 90%;
+    height: 56%;
+    transition: 0.3s ease;
+  }
+}
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .hero-container {
+    padding-left: 12% !important;
+    padding-right: 12% !important;
+  }
+
+  .intro-container {
+    width: 60%;
+  }
+
+  .photo-container {
+    width: 40%;
+  }
+
+  .about-me-holder {
+    display: flex;
+  }
+  .aboutmepic-holder {
+    display: flex;
+    width: 50%;
+    height: 800px;
+  }
+
+  .about-pic-conatiner {
+    display: flex;
+    width: 80%;
+    height: 60%;
+    border: 2px solid white;
+  }
+}
+
+/* Tablets Landscape */
+@media (max-width: 992px) {
+  .hero-container {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+  }
+
+  .intro-container {
+    width: 55%;
+  }
+  .photo-container {
+    width: 45%;
+  }
+}
+
+/* Tablets Portrait */
+@media (max-width: 768px) {
+  .aboutme-container {
+    height: 1295px;
+
+    .about-me-holder {
+      display: flex;
+      flex-direction: column;
+      .aboutmepic-holder {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+
+        .about-pic-conatiner {
+          display: flex;
+          width: 60%;
+          height: 80%;
+          border: 2px solid white;
+        }
+      }
+      .aboutmetext-holder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        gap: 15px;
+      }
+    }
+  }
+
+  .work-card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20%;
+
+    .company-name-holder {
+      width: 100%;
+    }
+    .title-spec-holder {
+      width: 100%;
+      order: 2;
+      justify-content: flex-start;
+      padding-left: 0px;
+      margin-top: 20px;
+    }
+
+    .date-holder {
+      justify-content: flex-start;
+      width: 100%;
+      order: 1;
+      margin-top: 20px;
+    }
+  }
+
+  .project-cards {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+
+    .project-image-area {
+      width: 100%;
+      height: 50%;
+    }
+
+    .project-description-area {
+      width: 100%;
+      height: 50%;
+    }
+  }
+}
+/* Phones */
+@media (max-width: 576px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 950px;
+    padding-top: 10%;
+    justify-content: flex-end;
+
+    .intro-Heading {
+      font-size: 30px;
+    }
+    .intro-container {
+      width: 100%;
+      height: 50%;
+    }
+    .photo-container {
+      width: 100%;
+      height: 50%;
+      justify-content: center;
+
+      .photo-holder {
+        width: 60%;
+        height: 85%;
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  .skill-container {
+    height: 900px;
+  }
+
+  .aboutme-container {
+    height: 1450px;
+
+    .about-pic-conatiner {
+      width: 76%;
+      height: 75%;
+    }
+  }
+}
+
+/* Small Phones */
+@media (max-width: 320px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 950px;
+    padding-top: 10%;
+    justify-content: flex-end;
+
+    .intro-Heading {
+      font-size: 30px;
+    }
+    .intro-container {
+      width: 100%;
+      height: 50%;
+    }
+    .photo-container {
+      width: 100%;
+      height: 50%;
+
+      .photo-holder {
+        width: 100%;
+        height: 90%;
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  .aboutme-container {
+    height: 1450px;
+
+    .about-pic-conatiner {
+      width: 76%;
+      height: 75%;
+    }
   }
 }

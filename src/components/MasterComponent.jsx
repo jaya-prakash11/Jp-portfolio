@@ -6,7 +6,7 @@ import { ThemeContext } from "../Provider/Themeprovider";
 
 function MasterComponent() {
   return (
-    <div>
+    <div className="rootdiv">
       <HeaderComponent></HeaderComponent>
       <HeroComponent></HeroComponent>
       <FooterComponent></FooterComponent>
